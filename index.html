@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Analisador de Função do 2º Grau</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Analisador de Função do 2º Grau</h1>
+        <form id="form">
+            <label for="a">Coeficiente a:</label>
+            <input type="number" id="a" value="1" step="any" required />
+            <label for="b">Coeficiente b:</label>
+            <input type="number" id="b" value="0" step="any" required />
+            <label for="c">Coeficiente c:</label>
+            <input type="number" id="c" value="0" step="any" required />
+            <fieldset>
+                <legend>Opções de Visualização:</legend>
+                <label><input type="checkbox" id="showVertex" checked /> Mostrar Vértice</label>
+                <label><input type="checkbox" id="showRoots" checked /> Mostrar Raízes</label>
+                <label><input type="checkbox" id="showFocus" /> Mostrar Foco</label>
+                <label><input type="checkbox" id="showAxis" checked /> Mostrar Eixo de Simetria</label>
+                <label><input type="checkbox" id="showGrid" checked /> Mostrar Grade</label>
+                <label><input type="checkbox" id="showIntersections" checked /> Mostrar Interseções com os Eixos</label>
+            </fieldset>
+            <button type="submit">Analisar e Plotar</button>
+            <button type="button" id="resetBtn">Limpar</button>
+        </form>
+        <div id="results"></div>
+        <canvas id="graph" width="600" height="400"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
